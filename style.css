@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, #1a3a8f 0%, #2a5caa 100%);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.tagline {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Navegação */
+nav {
+    background-color: #0d2a6c;
+    padding: 1rem 0;
+}
+nav .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+nav a {
+    color: #e0e7ff;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: white;
+}
+
+/* Conteúdo Principal */
+main {
+    padding: 3rem 0;
+}
+.hero {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2.5rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 50, 0.08);
+}
+.hero h2 {
+    font-size: 2.2rem;
+    color: #1a3a8f;
+    margin-bottom: 1rem;
+}
+.hero p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Grid de Artigos */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid #1a3a8f;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.card h3 {
+    color: #1a3a8f;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.card.highlight {
+    border-top-color: #ffb347;
+    background: linear-gradient(to bottom right, #fff9f0, #fff);
+}
+.btn {
+    display: inline-block;
+    background-color: #1a3a8f;
+    color: white;
+    padding: 0.8rem 1.8rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1.2rem;
+    transition: background-color 0.3s;
+}
+.btn:hover {
+    background-color: #0d2a6c;
+}
+.btn-secondary {
+    background-color: #ffb347;
+    color: #333;
+}
+.btn-secondary:hover {
+    background-color: #ff9e1f;
+}
+
+/* Seção de Monetização */
+.monetization {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 50, 0.08);
+    margin-top: 2rem;
+}
+.monetization h2 {
+    color: #1a3a8f;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.affiliate-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+.affiliate-card {
+    background: #f0f5ff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #2a5caa;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    transition: background-color 0.3s;
+}
+.affiliate-card:hover {
+    background-color: #e1e9ff;
+}
+.affiliate-card h4 {
+    color: #1a3a8f;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.small-note {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 1.5rem;
+    font-style: italic;
+}
+
+/* Rodapé */
+footer {
+    background-color: #0a1c45;
+    color: #b0c4ff;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav .container {
+        gap: 1.2rem;
+    }
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}
